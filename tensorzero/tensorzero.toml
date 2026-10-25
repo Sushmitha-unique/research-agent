@@ -2,7 +2,7 @@
 bind_address = "0.0.0.0:3000"
 
 [models.research_model]
-routing = ["openai_gpt4o", "groq_fallback"]
+routing = ["groq_fallback","openai_gpt4o",]
 
 [models.research_model.providers.openai_gpt4o]
 type = "openai"
@@ -10,7 +10,7 @@ model_name = "gpt-4o"
 
 [models.research_model.providers.groq_fallback]
 type = "groq"
-model_name = "llama-3.1-8b-instant"
+model_name = "openai/gpt-oss-20b"
 
 [functions.research_summarize]
 type = "chat"
